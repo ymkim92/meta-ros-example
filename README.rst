@@ -11,17 +11,12 @@ This is my folder structure: ::
     │   └── cb-1.0.0
     │       └── user_program
     │           ├── CMakeLists.txt
-    │           ├── include
-    │           │   └── user_program
     │           ├── package.xml
     │           └── src
     │               ├── listener.cpp
     │               └── talker.cpp
     ├── README.rst
     └── user-program_1.0.0.bb
-
-    6 directories, 6 files
-
 
 Compile this code: ::
 
