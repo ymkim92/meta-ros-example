@@ -27,4 +27,5 @@ Compile this code: ::
 
     yocto/build$ bitbake user-program
 
-
+This code came from http://wiki.ros.org/ROS/Tutorials/WritingPublisherSubscriber%28c%2B%2B%29.
+I modified it to fit to bitabke and meta-ros. It is not compiled on ``catkin_make``.
