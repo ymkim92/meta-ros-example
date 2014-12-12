@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 2.8.3)
-project(user_program)
+project(beginner_tutorials)
 
 ## Find catkin macros and libraries
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
@@ -113,16 +113,17 @@ include_directories(
 # target_link_libraries(beginner_tutorials_node
 #   ${catkin_LIBRARIES}
 # )
-
 include_directories(include ${catkin_INCLUDE_DIRS})
 
-add_executable(talker src/talker.cpp)
-target_link_libraries(talker ${catkin_LIBRARIES})
-add_dependencies(talker ${catkin_EXPORTED_TARGETS})
+add_executable(talker_tutorial src/talker.cpp)
+target_link_libraries(talker_tutorial ${catkin_LIBRARIES})
+#add_dependencies(talker_tutorial ${catkin_EXPORTED_TARGETS})
+add_dependencies(talker_tutorial beginner_tutorials_generate_messages_cpp)
 
-add_executable(listener src/listener.cpp)
-target_link_libraries(listener ${catkin_LIBRARIES})
-add_dependencies(listener ${catkin_EXPORTED_TARGETS})
+add_executable(listener_tutorial src/listener.cpp)
+target_link_libraries(listener_tutorial ${catkin_LIBRARIES})
+#add_dependencies(listener_tutorial ${catkin_EXPORTED_TARGETS})
+add_dependencies(listener_tutorial beginner_tutorials_generate_messages_cpp)
 
 #############
 ## Install ##
@@ -139,12 +140,11 @@ add_dependencies(listener ${catkin_EXPORTED_TARGETS})
 # )
 
 ## Mark executables and/or libraries for installation
-install(TARGETS talker listener
-  ARCHIVE DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
-  LIBRARY DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
-  RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
-)
-
+# install(TARGETS beginner_tutorials beginner_tutorials_node
+#   ARCHIVE DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
+#   LIBRARY DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
+#   RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
+# )
 
 ## Mark cpp header files for installation
 # install(DIRECTORY include/${PROJECT_NAME}/
@@ -172,4 +172,3 @@ install(TARGETS talker listener
 
 ## Add folders to be run by python nosetests
 # catkin_add_nosetests(test)
-
