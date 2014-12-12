@@ -24,5 +24,5 @@ Compile this code: ::
 
     yocto/build$ bitbake beginner-tutorials 
 
-The files under ``files`` folder code came from http://wiki.ros.org/ROS/Tutorials/WritingPublisherSubscriber%28c%2B%2B%29.
+The files under ``files`` folder came from http://wiki.ros.org/ROS/Tutorials/WritingPublisherSubscriber%28c%2B%2B%29.
 I just add bb file. You can compiled this code on both ``catkin_make`` and ``bitbake``.
